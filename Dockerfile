@@ -9,7 +9,7 @@ RUN apk add --no-cache \
     rsync
 
 # Default Version
-ARG VERSION='0.72.0'
+ARG VERSION='0.71.0'
 
 RUN mkdir -p /usr/local/src \
     && cd /usr/local/src \
