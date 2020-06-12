@@ -9,6 +9,8 @@ RUN apk add --no-cache \
     rsync
 
 ENV VERSION 0.72.0
+ENV DOCKER_TAG ${VERSION}
+
 RUN mkdir -p /usr/local/src \
     && cd /usr/local/src \
 
