@@ -8,8 +8,10 @@ RUN apk add --no-cache \
     openssh-client \
     rsync
 
-# Default Version
-ARG VERSION='0.71.0'
+# Default version, for use with local `docker build` commands
+# This will be overridden by $VERSION from `hooks/build` when
+# the image is built by Docker Autobuild
+ARG VERSION='0.72.0'
 
 RUN mkdir -p /usr/local/src \
     && cd /usr/local/src \
