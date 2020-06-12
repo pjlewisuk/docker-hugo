@@ -8,8 +8,8 @@ RUN apk add --no-cache \
     openssh-client \
     rsync
 
-ENV VERSION 0.72.0
-ENV DOCKER_TAG ${VERSION}
+# Default Version
+ARG VERSION='0.72.0'
 
 RUN mkdir -p /usr/local/src \
     && cd /usr/local/src \

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Set the Hugo Version
+VER='0.72.0'
+
+# Build the Image
+docker build --build-arg VERSION=$VER -f $DOCKERFILE_PATH -t $DOCKER_REPO:$VER .
+
+# Build the Image
+docker push $DOCKER_REPO:$VER
